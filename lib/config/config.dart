@@ -1,5 +1,6 @@
 library config.globals;
 
+import 'package:flip_card/flip_card_controller.dart';
 import 'package:flutter/material.dart';
 
 import '../utilis/details.dart';
@@ -79,6 +80,7 @@ List<Details> inicio = [
 
 List <bool> initialState = [];
 List <String> cartitas = [];
+List <FlipCardController> controllers = [];
 
 void inicializar(Level level){
   List<String> tmp = cards();
@@ -102,6 +104,7 @@ void inicializar(Level level){
     for (int i = 0; i < 10; i++) {
       initialState.add(true);
       cartitas.add(tmp[i]);
+      controllers.add( FlipCardController());
     }
   }
 }
